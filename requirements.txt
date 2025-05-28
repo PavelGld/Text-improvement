@@ -1,0 +1,7 @@
+Flask==2.2.2
+Flask-Cors==3.0.10
+dotenv==0.0.5
+langchain-openai==0.1.8
+# Возможно, потребуются другие зависимости LangChain в зависимости от используемых компонентов
+# Например: langchain-core
+langchain-core==0.1.52 

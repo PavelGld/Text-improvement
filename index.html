@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Translator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Основной контейнер приложения -->
+    <div class="container">
+        <!-- Заголовок приложения -->
+        <h1>AI Translator</h1>
+
+        <!-- Панель управления с выбором языков и стиля -->
+        <div class="controls">
+            <div class="language-select">
+                <label for="source-language">Исходный язык:</label>
+                <select id="source-language">
+                    <option value="ru">Русский</option>
+                    <option value="en">Английский</option>
+                    <option value="es">Испанский</option>
+                    <option value="fr">Французский</option>
+                    <option value="de">Немецкий</option>
+                    <option value="zh">Китайский</option>
+                    <option value="ja">Японский</option>
+                    <!-- Добавьте другие языки по желанию -->
+                </select>
+            </div>
+            <div class="style-select">
+                <label for="translation-style">Стиль:</label>
+                <select id="translation-style">
+                    <option value="formal">Формальный</option>
+                    <option value="informal">Неформальный</option>
+                    <option value="business">Бизнес-переписка</option>
+                    <option value="flirt">Флирт</option>
+                </select>
+            </div>
+            <div class="language-select">
+                <label for="target-language">Целевой язык:</label>
+                <select id="target-language">
+                    <option value="en">Английский</option>
+                    <option value="ru">Русский</option>
+                    <option value="es">Испанский</option>
+                    <option value="fr">Французский</option>
+                    <option value="de">Немецкий</option>
+                    <option value="zh">Китайский</option>
+                    <option value="ja">Японский</option>
+                    <!-- Добавьте другие языки по желанию -->
+                </select>
+            </div>
+        </div>
+
+        <!-- Выбор модели LLM -->
+        <div class="model-select">
+            <label for="llm-model">Модель LLM:</label>
+            <select id="llm-model">
+                <option value="google/gemini-2.0-flash-001">Gemini 2.0 Flash</option>
+                <option value="anthropic/claude-3-haiku">Claude 3 Haiku</option>
+                <option value="mistralai/mistral-7b-instruct-v0.2">Mistral 7B Instruct</option>
+                <option value="meta-llama/llama-3-8b-instruct">Llama 3 8B Instruct</option>
+                <!-- Добавьте другие модели OpenRouter по желанию -->
+            </select>
+        </div>
+
+        <!-- Области ввода и вывода текста с кнопками копирования -->
+        <div class="text-areas">
+            <div class="textarea-container">
+                <textarea id="source-text" placeholder="Введите текст"></textarea>
+                <button class="copy-button" data-target="source-text">Копировать</button>
+            </div>
+            <div class="textarea-container">
+                <textarea id="target-text" placeholder="Перевод" readonly></textarea>
+                <button class="copy-button" data-target="target-text">Копировать</button>
+            </div>
+        </div>
+
+        <!-- Кнопка для запуска перевода -->
+        <button id="translate-button">Translate</button>
+    </div>
+
+    <!-- Подключение JavaScript файла -->
+    <script src="script.js"></script>
+</body>
+</html> 
